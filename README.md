@@ -103,8 +103,8 @@ bin/setup
 ## Shell Scripts for Entering The Bash Shells for Each Container:
 `bash postgres_enter_container_bash.sh`
 `bash web_enter_container_bash.sh`
-`bash redis-enter-container-bash.sh`
-`bash sidekiq-enter-container-bash.sh`
+`bash redis_enter_container_bash.sh`
+`bash sidekiq_enter_container_bash.sh`
 
 
 # Helpful Debugging Cases:
