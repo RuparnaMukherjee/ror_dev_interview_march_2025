@@ -1,6 +1,11 @@
 # Welcome to the Dragonsurge Ruby on Rails Technical Assessment (March 2025 Version)!
 
-## Theme: Pokemon Teams! ![pikachu gif](https://emojis.slackmojis.com/emojis/images/1643514555/5541/pikachu.gif?1643514555)
+<p align="center">
+  <img src="https://emojis.slackmojis.com/emojis/images/1643514555/5541/pikachu.gif?1643514555" alt="pikachu gif" />
+</p>
+
+
+## Theme: Pokemon Teams! 
 
 
 ### Requirements
@@ -45,8 +50,7 @@ https://pokeapi.co/
 1. Don't let yourself work longer than three hours on the project. Catch em' all!
 
 
-![pikachu gif](https://emojis.slackmojis.com/emojis/images/1643514155/1155/pokeball.gif?1643514155)
-
+![pokeball gif](https://emojis.slackmojis.com/emojis/images/1643514155/1155/pokeball.gif?1643514155)
 
 # Codebase Setup: Getting Started!
 
