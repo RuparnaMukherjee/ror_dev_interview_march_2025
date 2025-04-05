@@ -56,6 +56,8 @@ https://pokeapi.co/
 
 ## Setup
 
+Note: This codebase is set to appear on port `3005`!
+
 Begin by cloning the repository.
 
 ## Docker Compose 
