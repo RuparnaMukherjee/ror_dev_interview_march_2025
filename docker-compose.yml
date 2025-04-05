@@ -1,0 +1,40 @@
+services:
+  redis:
+    image: redis
+    container_name: ror-dev-interview-2025-redis-cont
+    ports:
+      - 6379:6379
+  web: &base
+    build:
+      context: .
+      args:
+        RUBY_VERSION: "3.4.2"
+    container_name: ror-dev-interview-2025-cont
+    image: ror-dev-interview-2025-web
+    command: bash -c "rm -f /tmp/pids/server.pid && bundle  exec rails server -p ${RAILS_PORT} -b '0.0.0.0'"
+    env_file:
+    - .env
+    volumes:
+      - .:/ror_dev_interview_march_2025
+    working_dir: /ror_dev_interview_march_2025
+    ports: 
+      - "${RAILS_PORT}:${RAILS_PORT}"
+    tty: true
+    stdin_open: true
+  db:
+    image: postgres
+    container_name: ror-dev-interview-2025-postgresdb-cont
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+  sidekiq:
+    <<: *base
+    command: bundle exec sidekiq
+    container_name: ror-dev-interview-2025-sidekiq-cont
+    ports: []
+    volumes:
+      - .:/ror_dev_interview_march_2025
+    depends_on:
+      - redis
+      - db

@@ -1,0 +1,1 @@
+sudo docker exec -it ror-dev-interview-2025-cont /bin/bash

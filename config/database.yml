@@ -1,0 +1,25 @@
+# Postgres. Versions 3.8.0 and up are supported.
+#   gem install pg
+#
+#   Ensure the Postgres gem is defined in your Gemfile
+#   gem "pg"
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV["DATABASE_HOST"] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME", "ror_dev_interview_2025_development") %>
+
+test:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME", "ror_dev_interview_2025_test") %>
+
+production:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME", "ror_dev_interview_2025_production") %>

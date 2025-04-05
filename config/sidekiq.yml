@@ -1,0 +1,9 @@
+:concurrency: 5
+:scheduler:
+  :schedule: {
+    # example_worker:
+    #   cron: "*/5 * * * *" # every 5 minutes
+    #   class: ExampleWorker
+  }
+:queues:
+  - default
