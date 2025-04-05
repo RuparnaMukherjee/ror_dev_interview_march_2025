@@ -9,7 +9,7 @@ RUN apk add --no-cache \
     yaml-dev \
     libpq-dev  
 
-WORKDIR /ror-dev-interview-march-2025
+WORKDIR /ror_dev_interview_march_2025
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
