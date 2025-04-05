@@ -1,6 +1,7 @@
-# Welcome to the Dragonsurge Ruby on Rails Technical Assessment!
+# Welcome to the Dragonsurge Ruby on Rails Technical Assessment (March 2025 Version)!
 
-## Theme: Pokemon Teams! :D
+## Theme: Pokemon Teams! ![pikachu gif](https://emojis.slackmojis.com/emojis/images/1643514555/5541/pikachu.gif?1643514555)
+
 
 ### Requirements
 1. Please use the pokemon API to create pokemon teams!
@@ -10,7 +11,7 @@
 https://pokeapi.co/
 ```
 
-2. Make a route for creating Pokemon Teams.
+2. Make a route for creating Pokemon Teams. You can either take in the user's pokenames, or ids of pokemon, or just randomly assign pokemon, up to you.
 
 3. The teams should be able to be saved to the database somehow. (Don't worry about any kind of Users table for now, just the pokemon stuff)
 
@@ -25,15 +26,21 @@ https://pokeapi.co/
 8. Figure out a nice way to store the external ids of these pokemon in our local database, so that we can cross reference easily. And a nice way to get easy access to the external_url to that pokemon's SHOW page in the pokeAPI
 -Bonus points if you can make this external id storage system abstractable so that if we ever want to switch to using the Digimon API instead, we could, without having things hard-labeled to pokemon
 
-
 ### Another Bonus Points Feature
-1. You'll also notice that we have sidekiq installed, which is a worker gem that allows asynchronous processing in rails. 
+1. You'll also notice that we have sidekiq installed, which is a worker gem that allows asynchronous processing in rails. We also have sidekiq-scheduler, which is how we can get cronjobs.
 
-2. If you can find a way to update the pokemon that we have in our database on a semi-regular basis with sidekiq or sidekiq-scheduler (see sidekiq.yml for the scheduler portion), that would be super cool!
+2. If you can find a way to update the pokemon that we have in our database on a semi-regular basis with sidekiq/ sidekiq-scheduler (see sidekiq.yml for the scheduler portion), that would be super cool!
 
 3. Also, will you be able to account for having a *huge* database with lots and lots of pokemon? How will you optimize for that?
 
-## Getting started
+### Soft Limit:
+1. Don't let yourself work longer than three hours on the project. Catch em' all!
+
+
+![pikachu gif](https://emojis.slackmojis.com/emojis/images/1643514155/1155/pokeball.gif?1643514155)
+
+
+## Tech Tips for Getting Started
 
 ## Setup
 
