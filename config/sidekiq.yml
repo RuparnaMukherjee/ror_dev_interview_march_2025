@@ -1,9 +1,10 @@
 :concurrency: 5
 :scheduler:
   :schedule: {
-    # example_worker:
-    #   cron: "*/5 * * * *" # every 5 minutes
-    #   class: ExampleWorker
+    update_pokemon: {
+      cron: "1 * * * *",
+      class: UpdatePokemonJob
+      }
   }
 :queues:
   - default

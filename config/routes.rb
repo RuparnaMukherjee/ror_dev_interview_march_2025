@@ -11,6 +11,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :teams do
+    member do
+      patch :update_pokemon
+      delete :delete_pokemon
+      get :show
+    end
+  end
 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
